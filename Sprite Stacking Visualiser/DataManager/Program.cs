@@ -44,7 +44,7 @@ namespace DataManager
             for (int i = 0; i < frames; i++)
             {
                 Sprite s = new Sprite();
-                s.Path = $"Assets/{stackname}/{stackname}{i}.png"; // Path to the sprite image
+                s.Path = $"Assets\\{stackname}\\{stackname}{i}.png"; // Path to the sprite image
                 s.SpriteStack = spriteStack;
                 s.SpriteStackID = spriteStackID;
                 s.Frame = i;

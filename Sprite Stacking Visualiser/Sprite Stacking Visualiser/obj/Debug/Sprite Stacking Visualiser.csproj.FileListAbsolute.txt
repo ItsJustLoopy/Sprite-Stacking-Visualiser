@@ -42,3 +42,56 @@ C:\Users\itsju\Documents\GitHub\OOD-Project2025\Sprite Stacking Visualiser\Sprit
 C:\Users\itsju\Documents\GitHub\OOD-Project2025\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite Stacking Visualiser.exe
 C:\Users\itsju\Documents\GitHub\OOD-Project2025\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite Stacking Visualiser.pdb
 C:\Users\itsju\Documents\GitHub\OOD-Project2025\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite_Stacking_Visualiser.Migrations.AddFilePathsToSprite.resources
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\libSkiaSharp.dylib
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\x86\libSkiaSharp.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\x64\libSkiaSharp.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\arm64\libSkiaSharp.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\Sprite Stacking Visualiser.exe.config
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\Sprite Stacking Visualiser.exe
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\Sprite Stacking Visualiser.pdb
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\EntityFramework.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\GLWpfControl.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\OpenTK.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\SkiaSharp.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\SkiaSharp.Views.Desktop.Common.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\SkiaSharp.Views.WPF.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\System.Buffers.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\System.Memory.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\EntityFramework.xml
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\GLWpfControl.pdb
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\OpenTK.pdb
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\OpenTK.xml
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\SkiaSharp.pdb
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\SkiaSharp.Views.Desktop.Common.pdb
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\SkiaSharp.Views.WPF.pdb
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\System.Buffers.xml
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\System.Memory.xml
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite Stacking Visualiser.csproj.AssemblyReference.cache
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\MainWindow.g.cs
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\App.g.cs
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite Stacking Visualiser_MarkupCompile.cache
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite Stacking Visualiser_MarkupCompile.lref
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\MainWindow.baml
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite Stacking Visualiser.g.resources
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite_Stacking_Visualiser.Migrations.AddFilePathsToSprite.resources
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite_Stacking_Visualiser.Properties.Resources.resources
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite Stacking Visualiser.csproj.GenerateResource.cache
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite Stacking Visualiser.csproj.CoreCompileInputs.cache
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite S.3B2F3A27.Up2Date
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite Stacking Visualiser.exe
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite Stacking Visualiser.pdb
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\Assets\Crate\Crate0.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\Assets\Crate\Crate1.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\Assets\Crate\Crate2.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\Assets\Crate\Crate3.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\Assets\Crate\Crate4.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\Assets\Crate\Crate5.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\Assets\Crate\Crate6.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\bin\Debug\Assets\Crate\Crate7.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\Sprite Stacking Visualiser\obj\Debug\Sprite Stacking Visualiser_Content.g.cs

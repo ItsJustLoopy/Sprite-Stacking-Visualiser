@@ -45,7 +45,17 @@ namespace Sprite_Stacking_Visualiser
                     throw new InvalidOperationException("Sprite path is null or empty.");
 
                 sprite.Bitmap = SKBitmap.Decode(sprite.Path); // Decode the image from the path
-                _sprites.Add(sprite.Bitmap); // add it to the list  
+
+                _sprites.Add(sprite.Bitmap); // Add it to the list  
+
+                var fullPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, sprite.Path);//combine resource directory with the sprite path
+
+                if (!System.IO.File.Exists(fullPath))
+                    throw new InvalidOperationException($"File not found at path: {fullPath}");
+
+                sprite.Bitmap = SKBitmap.Decode(fullPath);
+                if (sprite.Bitmap == null)
+                    throw new InvalidOperationException($"Failed to decode image at path: {sprite.Path}");
             }
         }
 
@@ -66,10 +76,13 @@ namespace Sprite_Stacking_Visualiser
 
                     if (sprite != null)
                     {
+
                         var x = (width - sprite.Width) / 2;
-                        var y = (height - sprite.Height) / 2 - i * 10; // Offset each sprite by 10 pixels
+                        var y = (height - sprite.Height) / 2 - i * 1; // Offset each sprite by 10 pixels
                         canvas.DrawBitmap(sprite, x, y);
+
                     }
+
                 }
             }
         }
