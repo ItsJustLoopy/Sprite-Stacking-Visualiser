@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using System.Windows.Threading;
 using SkiaSharp;
@@ -33,7 +35,7 @@ namespace Sprite_Stacking_Visualiser
             SpinningAndPixelized
         }
 
-        public effect Currenteffect = effect.Spinning;
+        public effect Currenteffect = effect.SpinningAndPixelized;
 
         public SpriteStackingRenderer(SpriteStackData spriteStackData, int spriteStackID) // Constructor to initialize the renderer with the sprite stack data and ID
         {
@@ -130,6 +132,19 @@ namespace Sprite_Stacking_Visualiser
                         if (Currenteffect == effect.Spinning || Currenteffect == effect.SpinningAndPixelized)
                         {
                             canvas.RotateDegrees(_rotationAngle); // Apply the shared rotation angle
+                        }
+                        if (Currenteffect == effect.Pixelized || Currenteffect == effect.SpinningAndPixelized)
+                        {
+                            int pixelSize = 10; // Size of the pixel blocks
+                            using (var pixelatedBitmap = new SKBitmap(sprite.Width / pixelSize, sprite.Height / pixelSize))
+                            {
+                                // Scale down the sprite to simulate pixelation
+                                using (var tempCanvas = new SKCanvas(pixelatedBitmap))
+                                {
+                                    tempCanvas.DrawBitmap(sprite, new SKRect(0, 0, pixelatedBitmap.Width, pixelatedBitmap.Height));
+                                }
+
+                            }
                         }
 
 
