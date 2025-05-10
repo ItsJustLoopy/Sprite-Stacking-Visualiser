@@ -13,6 +13,16 @@ namespace Sprite_Stacking_Visualiser
         public SpriteStack StackToBeRendered; // Sprite stack to be rendered  
         SpriteStackData SData; // Database context to access the sprite stack data  
 
+        enum effect
+        {
+            None,
+            Spinning,
+            Pixelized,
+            SpinningAndPixelized
+        }
+
+        effect Currenteffect = effect.None;
+
         public SpriteStackingRenderer(SpriteStackData spriteStackData, int spriteStackID)
         {
             SData = spriteStackData;
@@ -48,7 +58,8 @@ namespace Sprite_Stacking_Visualiser
 
                 _sprites.Add(sprite.Bitmap); // Add it to the list  
 
-                var fullPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, sprite.Path);//combine resource directory with the sprite path
+                var fullPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, sprite.Path);
+                //combine resource directory with the sprite path - using this to avoid storing full path in the database for portability
 
                 if (!System.IO.File.Exists(fullPath))
                     throw new InvalidOperationException($"File not found at path: {fullPath}");
@@ -67,7 +78,7 @@ namespace Sprite_Stacking_Visualiser
             // Clear the canvas with a black color  
             canvas.Clear(SKColors.Black);
 
-            // Center the sprite stack on the canvas and stack the sprites with a small offset  
+            // Center the sprite stack on the canvas and stack the sprites with a small offset between each sprite  
             if (_sprites.Count > 0)
             {
                 for (int i = 0; i < _sprites.Count; i++)
@@ -77,9 +88,22 @@ namespace Sprite_Stacking_Visualiser
                     if (sprite != null)
                     {
 
-                        var x = (width - sprite.Width) / 2;
-                        var y = (height - sprite.Height) / 2 - i * 1; // Offset each sprite by 10 pixels
-                        canvas.DrawBitmap(sprite, x, y);
+
+
+                        // Calculate the scale factor to fit the sprite within the canvas dimensions
+                        var scaleX = (float)width / (sprite.Width+50); 
+                        var scaleY = (float)height / (sprite.Height+50);
+                        var scale = Math.Min(scaleX, scaleY);
+
+                        // Calculate the scaled width and height    
+                        var scaledWidth = (int)(sprite.Width * scale);
+                        var scaledHeight = (int)(sprite.Height * scale);
+
+                        var scaledX = (width - scaledWidth) / 2 ;
+                        var scaledY = (height - scaledHeight) /2 - i * 7; // Offset each sprite by 10 pixels
+                        canvas.DrawBitmap(sprite, new SKRect(scaledX, scaledY, scaledX + scaledWidth, scaledY + scaledHeight));
+
+                        // Draw the sprite on the canvas
 
                     }
 

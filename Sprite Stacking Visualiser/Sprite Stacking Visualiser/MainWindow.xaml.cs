@@ -35,10 +35,10 @@ namespace Sprite_Stacking_Visualiser
             renderer = new SpriteStackingRenderer(db, stackID);
             renderer.LoadSpriteStack(renderer.StackToBeRendered);
 
-            bitmap = new SKBitmap(800, 600);
+            bitmap = new SKBitmap(800, 600); // Create a bitmap to hold the rendered image
             using (var canvas = new SKCanvas(bitmap))
             {
-                renderer.Render(canvas, 800, 600);
+                renderer.Render(canvas, 800, 600); // Render the sprite stack onto the bitmap
             }
 
             // Create a SkiaSharp WPF view to display the canvas  
@@ -52,7 +52,7 @@ namespace Sprite_Stacking_Visualiser
             {
                 // Draw the bitmap onto the SkiaSharp view  
                 e.Surface.Canvas.Clear(SKColors.Black);
-                e.Surface.Canvas.DrawBitmap(bitmap, 0, 0);
+                e.Surface.Canvas.DrawBitmap(bitmap, 800, 600);
             };
 
 

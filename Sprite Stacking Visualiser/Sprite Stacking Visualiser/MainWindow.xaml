@@ -7,7 +7,13 @@
        xmlns:skia="clr-namespace:SkiaSharp.Views.WPF;assembly=SkiaSharp.Views.WPF"  
        mc:Ignorable="d"  
        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <skia:SKElement x:Name="SkiaCanvas" PaintSurface="SkiaCanvas_PaintSurface" />
-    </Grid>
+    <Border BorderBrush="White" BorderThickness="5" Margin="50,50,50,50">
+        <Grid Margin="-37,-27,-37,-27">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="305*"/>
+                <ColumnDefinition Width="77*"/>
+            </Grid.ColumnDefinitions>
+            <skia:SKElement x:Name="SkiaCanvas" PaintSurface="SkiaCanvas_PaintSurface" Grid.ColumnSpan="2" Margin="142,78,142,78" />
+        </Grid>
+    </Border>
 </Window>
