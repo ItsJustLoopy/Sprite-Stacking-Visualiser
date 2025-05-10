@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
+using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Threading;
 using SkiaSharp;
@@ -17,6 +19,9 @@ namespace Sprite_Stacking_Visualiser
         SKBitmap bitmap;
         private DispatcherTimer _updateTimer; // Timer to control the rendering speed
         SKElement skiaView;
+        SpriteStackData spriteStackData = new SpriteStackData(); // Database context to access the sprite stack data
+
+        SpriteStack selectedStack = new SpriteStack(); // Variable to hold the selected sprite stack from the list box
 
         public MainWindow()
         {
@@ -40,9 +45,8 @@ namespace Sprite_Stacking_Visualiser
             _updateTimer.Start(); 
 
 
-            // Initialize rendering engine  
-            var spriteStackData = new SpriteStackData();
-            InitializeRenderer(spriteStackData, 1); // Pass the database context and stack ID to the renderer
+            // Initialize rendering engine 
+            InitializeRenderer(spriteStackData, 1); // Pass the database context and stack ID to the renderer 
         }
 
         private void InitializeRenderer(SpriteStackData db, int stackID)
@@ -50,6 +54,8 @@ namespace Sprite_Stacking_Visualiser
             
             renderer = new SpriteStackingRenderer(db, stackID);
             renderer.LoadSpriteStack(renderer.StackToBeRendered);
+
+            selectedStack = renderer.StackToBeRendered; // Get the selected sprite stack from the renderer at the start
 
             bitmap = new SKBitmap(1000, 600); // Create a bitmap to hold the rendered image
             
@@ -71,7 +77,7 @@ namespace Sprite_Stacking_Visualiser
 
             using (var canvas = new SKCanvas(bitmap))
             {
-                renderer.Render(canvas, 1000, 600); // Render the sprite stack onto the bitmap
+                renderer.Render(canvas, 1000, 600, 0); // Render the sprite stack onto the bitmap
 
 
             }
@@ -92,6 +98,9 @@ namespace Sprite_Stacking_Visualiser
 
             SkiaCanvas.InvalidateVisual(); // Invalidate the SkiaSharp view to trigger a repaint - updates wpf view
 
+            renderer.StackToBeRendered = selectedStack; // Update the sprite stack to be rendered with the selected stack from the list box
+
+            renderer.LoadSpriteStack(renderer.StackToBeRendered); // Load the selected sprite stack into the renderer
         }
 
         private void SkiaCanvas_PaintSurface(object sender, SkiaSharp.Views.Desktop.SKPaintSurfaceEventArgs e)
@@ -101,8 +110,30 @@ namespace Sprite_Stacking_Visualiser
             e.Surface.Canvas.Clear(SKColors.Black);
 
             // Render the sprite stack on the canvas  
-            renderer.Render(e.Surface.Canvas, e.Info.Width, e.Info.Height);
+            renderer.Render(e.Surface.Canvas, e.Info.Width, e.Info.Height, selectedStack._spriteOffsetX);
 
+        }
+
+        private void Lbx_SpriteStacks_Initialized(object sender, EventArgs e)
+        {
+            Lbx_SpriteStacks.Items.Clear(); // Clear the list box before adding items
+
+            var spritestacklist = spriteStackData.SpriteStacks.ToList(); // Get the list of sprite stacks from the database
+
+            foreach (var stack in spritestacklist)
+            {
+                Lbx_SpriteStacks.Items.Add(stack._SpriteStackName); // Add each sprite stack to the list box
+            }
+
+            Lbx_SpriteStacks.SelectedIndex = 0; // Select the first sprite stack by default
+
+            selectedStack = spriteStackData.SpriteStacks.FirstOrDefault(x => x._SpriteStackName == Lbx_SpriteStacks.SelectedItem.ToString()); // Get the selected sprite stack from the database
+
+        }
+
+        private void Lbx_SpriteStacks_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            selectedStack = spriteStackData.SpriteStacks.FirstOrDefault(x => x._SpriteStackName == Lbx_SpriteStacks.SelectedItem.ToString()); // Get the selected sprite stack from the database
         }
     }
 }

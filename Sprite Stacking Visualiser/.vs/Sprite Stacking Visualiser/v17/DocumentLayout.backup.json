@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\sprite stacking visualiser\\spritestackrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|solutionrelative:sprite stacking visualiser\\spritestackrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|c:\\users\\itsju\\documents\\github\\ood-project-2025-sprite-stacking-visualiser\\sprite stacking visualiser\\sprite stacking visualiser\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|solutionrelative:sprite stacking visualiser\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5FAA5D57-5B86-4313-B1F9-90E7FA7807F0}|DataManager\\DataManager.csproj|C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\datamanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FAA5D57-5B86-4313-B1F9-90E7FA7807F0}|DataManager\\DataManager.csproj|solutionrelative:datamanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\sprite stacking visualiser\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|c:\\users\\itsju\\documents\\github\\ood-project-2025-sprite-stacking-visualiser\\sprite stacking visualiser\\sprite stacking visualiser\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|solutionrelative:sprite stacking visualiser\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\sprite stacking visualiser\\spritestack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|solutionrelative:sprite stacking visualiser\\spritestack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\sprite stacking visualiser\\migrations\\202505101926078_addspriteoffset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|solutionrelative:sprite stacking visualiser\\migrations\\202505101926078_addspriteoffset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\sprite stacking visualiser\\spritestackrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|solutionrelative:sprite stacking visualiser\\spritestackrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\sprite stacking visualiser\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FBE5B3F-53BC-4489-9284-51024672903E}|Sprite Stacking Visualiser\\Sprite Stacking Visualiser.csproj|solutionrelative:sprite stacking visualiser\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,51 +43,75 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "202505101926078_AddSpriteOffset.cs",
+              "DocumentMoniker": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\Migrations\\202505101926078_AddSpriteOffset.cs",
+              "RelativeDocumentMoniker": "Sprite Stacking Visualiser\\Migrations\\202505101926078_AddSpriteOffset.cs",
+              "ToolTip": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\Migrations\\202505101926078_AddSpriteOffset.cs",
+              "RelativeToolTip": "Sprite Stacking Visualiser\\Migrations\\202505101926078_AddSpriteOffset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:26:11.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SpriteStack.cs",
+              "DocumentMoniker": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\SpriteStack.cs",
+              "RelativeDocumentMoniker": "Sprite Stacking Visualiser\\SpriteStack.cs",
+              "ToolTip": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\SpriteStack.cs",
+              "RelativeToolTip": "Sprite Stacking Visualiser\\SpriteStack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:18:06.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Sprite Stacking Visualiser\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\MainWindow.xaml",
               "RelativeToolTip": "Sprite Stacking Visualiser\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-08T22:24:19.854Z"
+              "WhenOpened": "2025-05-08T22:24:19.854Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Sprite Stacking Visualiser\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\MainWindow.xaml.cs",
               "RelativeToolTip": "Sprite Stacking Visualiser\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAYwE8AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T23:18:09.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T23:18:09.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SpriteStackRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\SpriteStackRenderer.cs",
+              "RelativeDocumentMoniker": "Sprite Stacking Visualiser\\SpriteStackRenderer.cs",
+              "ToolTip": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\SpriteStackRenderer.cs",
+              "RelativeToolTip": "Sprite Stacking Visualiser\\SpriteStackRenderer.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowCkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T23:32:37.617Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SpriteStackRenderer.cs",
-              "DocumentMoniker": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\SpriteStackRenderer.cs",
-              "RelativeDocumentMoniker": "Sprite Stacking Visualiser\\SpriteStackRenderer.cs",
-              "ToolTip": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\Sprite Stacking Visualiser\\SpriteStackRenderer.cs*",
-              "RelativeToolTip": "Sprite Stacking Visualiser\\SpriteStackRenderer.cs*",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAswJEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T23:32:37.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\DataManager\\Program.cs",
               "RelativeDocumentMoniker": "DataManager\\Program.cs",
               "ToolTip": "C:\\Users\\itsju\\Documents\\GitHub\\OOD-Project-2025-Sprite-Stacking-Visualiser\\Sprite Stacking Visualiser\\DataManager\\Program.cs",
               "RelativeToolTip": "DataManager\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T01:04:16.982Z"
+              "WhenOpened": "2025-05-09T01:04:16.982Z",
+              "EditorCaption": ""
             }
           ]
         }

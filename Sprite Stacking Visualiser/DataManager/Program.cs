@@ -16,12 +16,14 @@ namespace DataManager
             using (db)
             {
                 // Create new sprite stacks
-                CreateSpriteStack(db, "Crate", 8, 1);
+                CreateSpriteStack(db, "Crate", 8, 1, 7);
+                CreateSpriteStack(db, "Chest", 18, 2, 7);
+                CreateSpriteStack(db, "Chair", 12, 3, 10);
             }
 
         }
 
-        static void CreateSpriteStack(SpriteStackData db, string stackname, int frames, int spriteStackID)
+        static void CreateSpriteStack(SpriteStackData db, string stackname, int frames, int spriteStackID, int spriteOffset)
         {
 
 
@@ -29,6 +31,7 @@ namespace DataManager
             spriteStack._sprites = new List<Sprite>();
             spriteStack._SpriteStackName = stackname;
             spriteStack._numberOfFrames = frames;
+            spriteStack._spriteOffsetX = spriteOffset; // Offset in X direction for the sprite stack
 
 
             spriteStack._SpriteStackID = spriteStackID;

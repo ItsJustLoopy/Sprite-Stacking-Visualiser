@@ -30,19 +30,16 @@ namespace Sprite_Stacking_Visualiser
         public enum effect
         {
             None,
-            Spinning,
-            Pixelized,
-            SpinningAndPixelized
+            Spinning
         }
 
-        public effect Currenteffect = effect.SpinningAndPixelized;
+        public effect Currenteffect = effect.Spinning;
 
         public SpriteStackingRenderer(SpriteStackData spriteStackData, int spriteStackID) // Constructor to initialize the renderer with the sprite stack data and ID
         {
             SData = spriteStackData;
             _spriteStackID = spriteStackID;
             StackToBeRendered = StackToRender();
-
 
         }
         public SpriteStack StackToRender()
@@ -97,7 +94,7 @@ namespace Sprite_Stacking_Visualiser
             }
         }
 
-        public void Render(SKCanvas canvas, float width, float height)
+        public void Render(SKCanvas canvas, float width, float height, int spriteOffset)
         {
             if (canvas == null) throw new ArgumentNullException(nameof(canvas));
             if (width <= 0 || height <= 0) throw new ArgumentOutOfRangeException("Width and height must be positive.");
@@ -129,24 +126,10 @@ namespace Sprite_Stacking_Visualiser
                         canvas.Translate(scaledX + scaledWidth / 2, scaledY + scaledHeight / 2); // Translate to the center
 
 
-                        if (Currenteffect == effect.Spinning || Currenteffect == effect.SpinningAndPixelized)
+                        if (Currenteffect == effect.Spinning)
                         {
                             canvas.RotateDegrees(_rotationAngle); // Apply the shared rotation angle
                         }
-                        if (Currenteffect == effect.Pixelized || Currenteffect == effect.SpinningAndPixelized)
-                        {
-                            int pixelSize = 10; // Size of the pixel blocks
-                            using (var pixelatedBitmap = new SKBitmap(sprite.Width / pixelSize, sprite.Height / pixelSize))
-                            {
-                                // Scale down the sprite to simulate pixelation
-                                using (var tempCanvas = new SKCanvas(pixelatedBitmap))
-                                {
-                                    tempCanvas.DrawBitmap(sprite, new SKRect(0, 0, pixelatedBitmap.Width, pixelatedBitmap.Height));
-                                }
-
-                            }
-                        }
-
 
                         canvas.Translate(-(scaledX + scaledWidth / 2), -(scaledY + scaledHeight / 2)); // Translate back to avoid rotating the entire canvas
 

@@ -11,6 +11,7 @@ namespace Sprite_Stacking_Visualiser
     {
 
         public int _numberOfFrames { get; set; }
+        [Required] public int _spriteOffsetX { get; set; } // Offset in X direction for the sprite stack
         [Key] public int _SpriteStackID { get; set; } // Primary key for the sprite stack
         public string _SpriteStackName { get; set; }
 
