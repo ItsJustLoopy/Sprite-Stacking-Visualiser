@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
+using System.Windows.Controls;
+using System.Windows.Media.Media3D;
+using System.Windows.Threading;
 using SkiaSharp;
+using static System.Data.Entity.Infrastructure.Design.Executor;
 
 namespace Sprite_Stacking_Visualiser
 {
@@ -13,7 +18,14 @@ namespace Sprite_Stacking_Visualiser
         public SpriteStack StackToBeRendered; // Sprite stack to be rendered  
         SpriteStackData SData; // Database context to access the sprite stack data  
 
-        enum effect
+        public float _rotationAngle = 3f; // Rotation angle for all sprites
+        public float RotationSpeed = 50f; // Rotation speed in degrees per update
+
+        public float scaleX, scaleY, scale, scaledWidth, scaledHeight, scaledX, scaledY; // Variables to hold the scale factors and dimensions of the sprites
+
+
+
+        public enum effect
         {
             None,
             Spinning,
@@ -21,22 +33,22 @@ namespace Sprite_Stacking_Visualiser
             SpinningAndPixelized
         }
 
-        effect Currenteffect = effect.None;
+        public effect Currenteffect = effect.Spinning;
 
-        public SpriteStackingRenderer(SpriteStackData spriteStackData, int spriteStackID)
+        public SpriteStackingRenderer(SpriteStackData spriteStackData, int spriteStackID) // Constructor to initialize the renderer with the sprite stack data and ID
         {
             SData = spriteStackData;
             _spriteStackID = spriteStackID;
-            StackToBeRendered = StackToRender(spriteStackID, spriteStackData);
+            StackToBeRendered = StackToRender();
+
+
         }
-
-
-        public SpriteStack StackToRender(int ID, SpriteStackData db)
+        public SpriteStack StackToRender()
         {
-            var spriteStack = db.SpriteStacks.FirstOrDefault(x => x._SpriteStackID == ID); // Get the sprite stack to be rendered from the database  
+            var spriteStack = SData.SpriteStacks.FirstOrDefault(x => x._SpriteStackID == _spriteStackID); // Get the sprite stack to be rendered from the database  
             if (spriteStack == null)
             {
-                throw new ArgumentException($"Sprite stack with ID {ID} not found.");
+                throw new ArgumentException($"Sprite stack with ID {_spriteStackID} not found.");
             }
             return spriteStack;
         }
@@ -59,26 +71,36 @@ namespace Sprite_Stacking_Visualiser
                 _sprites.Add(sprite.Bitmap); // Add it to the list  
 
                 var fullPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, sprite.Path);
-                //combine resource directory with the sprite path - using this to avoid storing full path in the database for portability
+                // Combine resource directory with the sprite path - using this to avoid storing full path in the database for portability
 
                 if (!System.IO.File.Exists(fullPath))
                     throw new InvalidOperationException($"File not found at path: {fullPath}");
 
-                sprite.Bitmap = SKBitmap.Decode(fullPath);
+                sprite.Bitmap = SKBitmap.Decode(fullPath); 
                 if (sprite.Bitmap == null)
                     throw new InvalidOperationException($"Failed to decode image at path: {sprite.Path}");
             }
+
+            foreach (var sprite in _sprites)
+            {
+                if (sprite == null)
+                    throw new ArgumentNullException("Sprite is null.");
+
+                if (sprite.Width <= 0 || sprite.Height <= 0)
+                    throw new InvalidOperationException("Sprite dimensions are invalid.");
+
+                // Calculate the scale factor to fit the sprite within the canvas dimensions
+
+
+            }
         }
 
-        public void Render(SKCanvas canvas, int width, int height) // Render the sprite stack  
+        public void Render(SKCanvas canvas, float width, float height)
         {
             if (canvas == null) throw new ArgumentNullException(nameof(canvas));
             if (width <= 0 || height <= 0) throw new ArgumentOutOfRangeException("Width and height must be positive.");
-
-            // Clear the canvas with a black color  
-            canvas.Clear(SKColors.Black);
-
-            // Center the sprite stack on the canvas and stack the sprites with a small offset between each sprite  
+        
+            // Center the sprite stack on the canvas and stack the sprites with a small offset between each sprite
             if (_sprites.Count > 0)
             {
                 for (int i = 0; i < _sprites.Count; i++)
@@ -88,27 +110,43 @@ namespace Sprite_Stacking_Visualiser
                     if (sprite != null)
                     {
 
-
-
                         // Calculate the scale factor to fit the sprite within the canvas dimensions
-                        var scaleX = (float)width / (sprite.Width+50); 
-                        var scaleY = (float)height / (sprite.Height+50);
-                        var scale = Math.Min(scaleX, scaleY);
+                        scaleX = width / (sprite.Width + 20);
+                        scaleY = height / (sprite.Height + 20);
+                        scale = Math.Min(scaleX, scaleY);
 
-                        // Calculate the scaled width and height    
-                        var scaledWidth = (int)(sprite.Width * scale);
-                        var scaledHeight = (int)(sprite.Height * scale);
+                        // Calculate the scaled width and height
+                        scaledWidth = (sprite.Width * scale);
+                        scaledHeight = (sprite.Height * scale);
 
-                        var scaledX = (width - scaledWidth) / 2 ;
-                        var scaledY = (height - scaledHeight) /2 - i * 7; // Offset each sprite by 10 pixels
-                        canvas.DrawBitmap(sprite, new SKRect(scaledX, scaledY, scaledX + scaledWidth, scaledY + scaledHeight));
+                        scaledX = (width - scaledWidth) / 2;
+                        scaledY = (height - scaledHeight) / 2 - i * 7; // Offset each sprite by 7 pixels vertically
 
-                        // Draw the sprite on the canvas
+                        canvas.Save();
 
+                        canvas.Translate(scaledX + scaledWidth / 2, scaledY + scaledHeight / 2); // Translate to the center
+
+
+                        if (Currenteffect == effect.Spinning || Currenteffect == effect.SpinningAndPixelized)
+                        {
+                            canvas.RotateDegrees(_rotationAngle); // Apply the shared rotation angle
+                        }
+
+
+                        canvas.Translate(-(scaledX + scaledWidth / 2), -(scaledY + scaledHeight / 2)); // Translate back to avoid rotating the entire canvas
+
+                        canvas.DrawBitmap(sprite, new SKRect(scaledX, scaledY, scaledX + scaledWidth, scaledY + scaledHeight)); // Draw the sprite with the calculated dimensions
+
+                        canvas.Restore(); 
                     }
-
                 }
             }
         }
+
+        public void SetEffect(effect newEffect)
+        {
+            Currenteffect = newEffect; // Set the current effect to the new effect
+        }
+
     }
 }
