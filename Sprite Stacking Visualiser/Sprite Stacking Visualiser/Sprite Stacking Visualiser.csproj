@@ -172,12 +172,14 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-	<ItemGroup>
-		<Content Include="Assets\**\*.png">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</Content>
-	</ItemGroup>
-	<ItemGroup>
+  <ItemGroup>
+    <Resource Include="AddSpriteStackWindowIcon.png" />
+    <Content Include="Assets\**\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="SpritestackingVisualiserIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>

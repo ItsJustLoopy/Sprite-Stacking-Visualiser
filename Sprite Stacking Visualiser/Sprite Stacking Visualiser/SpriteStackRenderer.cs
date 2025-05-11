@@ -55,6 +55,7 @@ namespace Sprite_Stacking_Visualiser
         public void LoadSpriteStack(SpriteStack spriteStack)
         {
             _sprites.Clear(); // Clear the list before loading new sprites  
+
             for (int i = 0; i < spriteStack._numberOfFrames; i++)
             {
                 var sprite = spriteStack._sprites[i];

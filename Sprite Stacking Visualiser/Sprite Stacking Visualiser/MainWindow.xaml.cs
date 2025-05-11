@@ -115,6 +115,7 @@ namespace Sprite_Stacking_Visualiser
             Lsv_Sprites_Initialized(sender, e);
 
             renderer.StackToBeRendered._spriteOffsetX = (int)Sld_SpriteOffsetX.Value; // Update the sprite offset value based on the slider value
+            TxtBlck_PixelOffsetX.Text = ((ushort)Sld_SpriteOffsetX.Value).ToString() + "Px"; // Update the text block with the current sprite offset value
 
         }
 
@@ -125,7 +126,11 @@ namespace Sprite_Stacking_Visualiser
             e.Surface.Canvas.Clear(SKColors.Black);
 
             // Render the sprite stack on the canvas  
-            renderer.Render(e.Surface.Canvas, e.Info.Width, e.Info.Height, selectedStack._spriteOffsetX);
+            if ((Lbx_SpriteStacks.SelectedItem != null))
+            {
+                renderer.Render(e.Surface.Canvas, e.Info.Width, e.Info.Height, selectedStack._spriteOffsetX);
+            }
+            
 
         }
 
@@ -148,9 +153,14 @@ namespace Sprite_Stacking_Visualiser
 
         private void Lbx_SpriteStacks_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            selectedStack = spriteStackData.SpriteStacks.FirstOrDefault(x => x._SpriteStackName == Lbx_SpriteStacks.SelectedItem.ToString()); // Get the selected sprite stack from the database
-            
+            if (Lbx_SpriteStacks.SelectedItem != null)
+            {
+                string selectedName = Lbx_SpriteStacks.SelectedItem.ToString();
+                selectedStack = spriteStackData.SpriteStacks.FirstOrDefault(x => x._SpriteStackName == selectedName);
 
+                if (Sld_SpriteOffsetX != null)
+                Sld_SpriteOffsetX.Value = selectedStack._spriteOffsetX; // Update the sprite offset slider value based on the selected stack
+            }
         }
 
         private void Lsv_Sprites_Initialized(object sender, EventArgs e)
@@ -190,6 +200,27 @@ namespace Sprite_Stacking_Visualiser
             // Open the AddSpriteStackWindow as a dialog
             AddSpriteStackWindow addSpriteStackWindow = new AddSpriteStackWindow();
             addSpriteStackWindow.ShowDialog();
+        }
+
+        private void Btn_RemoveStack_Click(object sender, RoutedEventArgs e)
+        {
+            // Remove the selected sprite stack from the database
+
+            if (Lbx_SpriteStacks.SelectedItem != null)
+            {
+                string selectedStackName = Lbx_SpriteStacks.SelectedItem.ToString();
+                var stackToRemove = spriteStackData.SpriteStacks.FirstOrDefault(x => x._SpriteStackName == selectedStackName);
+                if (stackToRemove != null)
+                {
+                    spriteStackData.SpriteStacks.Remove(stackToRemove);
+                    spriteStackData.SaveChanges(); // Save changes to the database
+                    Lbx_SpriteStacks.Items.Remove(selectedStackName); // Remove the stack from the list box
+
+                    Lsv_Sprites.Items.Clear(); // Clear the sprite list view
+                    Lbx_SpriteStacks_Initialized(sender, e); // Reinitialize the sprite stack list box
+
+                }
+            }
         }
     }
 }
