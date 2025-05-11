@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Threading;
 using SkiaSharp;
 using SkiaSharp.Views.WPF;
 using Sprite_Stacking_Visualiser;
+using System.Drawing;
+using System.Windows.Media.Imaging;
+using System.Security.Policy;
 
 namespace Sprite_Stacking_Visualiser
 {
@@ -101,6 +106,10 @@ namespace Sprite_Stacking_Visualiser
             renderer.StackToBeRendered = selectedStack; // Update the sprite stack to be rendered with the selected stack from the list box
 
             renderer.LoadSpriteStack(renderer.StackToBeRendered); // Load the selected sprite stack into the renderer
+
+            Lsv_Sprites.Items.Clear(); 
+            Lsv_Sprites_Initialized(sender, e); 
+
         }
 
         private void SkiaCanvas_PaintSurface(object sender, SkiaSharp.Views.Desktop.SKPaintSurfaceEventArgs e)
@@ -134,6 +143,40 @@ namespace Sprite_Stacking_Visualiser
         private void Lbx_SpriteStacks_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             selectedStack = spriteStackData.SpriteStacks.FirstOrDefault(x => x._SpriteStackName == Lbx_SpriteStacks.SelectedItem.ToString()); // Get the selected sprite stack from the database
+            
+
+        }
+
+        private void Lsv_Sprites_Initialized(object sender, EventArgs e)
+        {
+
+            List<Image> SpriteList = new List<Image>();
+
+            for (int i = 0; i < selectedStack._sprites.Count; i++)
+            {
+                // get image from file and set it to the image variable
+                var image = new Image();
+                var imagesource = new BitmapImage();
+
+                imagesource.BeginInit();
+                imagesource.UriSource = new Uri(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, selectedStack._sprites[i].Path));
+                imagesource.EndInit();
+
+                image.Stretch = Stretch.Fill;
+                image.Width = imagesource.Width * 2;
+                image.Height = imagesource.Height * 2;
+                image.Source = imagesource;
+
+                SpriteList.Add(image);
+
+            }
+
+            foreach (Image image in SpriteList)
+            {
+                Lsv_Sprites.Items.Add(image);
+            }
+
+
         }
     }
 }

@@ -11,13 +11,20 @@
 
     <Border BorderBrush="White" BorderThickness="3" Margin="5,5,5,5">
         <Grid Margin="-37,-27,-37,-27">
-            <Border BorderBrush="White" BorderThickness="2" Margin="512,138,154,138">
+            <Border BorderBrush="White" BorderThickness="2" Margin="347,78,243,77">
                 <skia:SKElement x:Name="SkiaCanvas" PaintSurface="SkiaCanvas_PaintSurface" Margin="41,27,41,27" />
             </Border>
-            <Border BorderBrush="White" BorderThickness="2" Margin="100,138,755,266">
+            <Border BorderBrush="White" BorderThickness="2" Margin="100,77,755,327">
                 <ListBox x:Name="Lbx_SpriteStacks" HorizontalContentAlignment="Center" Initialized="Lbx_SpriteStacks_Initialized" SelectionChanged="Lbx_SpriteStacks_SelectionChanged" Foreground="White" Background="{x:Null}" FontFamily="Sitka Banner Semibold" FontSize="16"  />
 
             </Border>
+            <ListView x:Name="Lsv_Sprites" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="859,77,0,78" Initialized="Lsv_Sprites_Initialized" Foreground="Black" Background="Black" BorderBrush="White" HorizontalAlignment="Left">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
         </Grid>
     </Border>
 </Window>
