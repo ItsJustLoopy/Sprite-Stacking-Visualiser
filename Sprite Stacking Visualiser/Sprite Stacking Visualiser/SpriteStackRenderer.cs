@@ -88,8 +88,6 @@ namespace Sprite_Stacking_Visualiser
                 if (sprite.Width <= 0 || sprite.Height <= 0)
                     throw new InvalidOperationException("Sprite dimensions are invalid.");
 
-                // Calculate the scale factor to fit the sprite within the canvas dimensions
-
 
             }
         }
@@ -119,7 +117,7 @@ namespace Sprite_Stacking_Visualiser
                         scaledHeight = (sprite.Height * scale);
 
                         scaledX = (width - scaledWidth) / 2;
-                        scaledY = (height - scaledHeight) / 2 - i * 7; // Offset each sprite by 7 pixels vertically
+                        scaledY = (height - scaledHeight) / 2 - i * spriteOffset; // Offset each sprite by 7 pixels vertically
 
                         canvas.Save();
 

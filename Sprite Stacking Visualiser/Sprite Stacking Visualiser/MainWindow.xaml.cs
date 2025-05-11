@@ -12,6 +12,7 @@ using Sprite_Stacking_Visualiser;
 using System.Drawing;
 using System.Windows.Media.Imaging;
 using System.Security.Policy;
+using System.Data.Entity.Core.Metadata.Edm;
 
 namespace Sprite_Stacking_Visualiser
 {
@@ -27,6 +28,8 @@ namespace Sprite_Stacking_Visualiser
         SpriteStackData spriteStackData = new SpriteStackData(); // Database context to access the sprite stack data
 
         SpriteStack selectedStack = new SpriteStack(); // Variable to hold the selected sprite stack from the list box
+
+        public int _spriteOffsetX = 7; // Default value for sprite offset - this is the offset for the sprite stack in the X direction
 
         public MainWindow()
         {
@@ -49,6 +52,7 @@ namespace Sprite_Stacking_Visualiser
 
             _updateTimer.Start(); 
 
+            Sld_SpriteOffsetX.Value = _spriteOffsetX; 
 
             // Initialize rendering engine 
             InitializeRenderer(spriteStackData, 1); // Pass the database context and stack ID to the renderer 
@@ -110,7 +114,7 @@ namespace Sprite_Stacking_Visualiser
             Lsv_Sprites.Items.Clear(); 
             Lsv_Sprites_Initialized(sender, e);
 
-            
+            renderer.StackToBeRendered._spriteOffsetX = (int)Sld_SpriteOffsetX.Value; // Update the sprite offset value based on the slider value
 
         }
 
