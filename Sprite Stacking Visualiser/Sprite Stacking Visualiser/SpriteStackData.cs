@@ -12,7 +12,7 @@ namespace Sprite_Stacking_Visualiser
         public SpriteStackData() : base("SpriteStackData")
         {
         }
-        public DbSet<SpriteStack> SpriteStacks { get; set; }
-        public DbSet<Sprite> Sprites { get; set; }
+        public virtual DbSet<SpriteStack> SpriteStacks { get; set; } 
+        public virtual DbSet<Sprite> Sprites { get; set; }
     }
 }

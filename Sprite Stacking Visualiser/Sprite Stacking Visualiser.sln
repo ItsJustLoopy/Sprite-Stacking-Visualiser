@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sprite Stacking Visualiser"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManager", "DataManager\DataManager.csproj", "{5FAA5D57-5B86-4313-B1F9-90E7FA7807F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderingTests", "MainWindowTests\RenderingTests.csproj", "{2DA11B69-F91F-4B6B-9427-243FAD55DF19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5FAA5D57-5B86-4313-B1F9-90E7FA7807F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FAA5D57-5B86-4313-B1F9-90E7FA7807F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FAA5D57-5B86-4313-B1F9-90E7FA7807F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA11B69-F91F-4B6B-9427-243FAD55DF19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA11B69-F91F-4B6B-9427-243FAD55DF19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA11B69-F91F-4B6B-9427-243FAD55DF19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA11B69-F91F-4B6B-9427-243FAD55DF19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

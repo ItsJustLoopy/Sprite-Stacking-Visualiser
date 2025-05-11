@@ -21,15 +21,17 @@ namespace Sprite_Stacking_Visualiser
     /// </summary>  
     public partial class MainWindow : Window
     {
-        SpriteStackingRenderer renderer;
+        public SpriteStackingRenderer renderer;
         SKBitmap bitmap;
-        private DispatcherTimer _updateTimer; // Timer to control the rendering speed
+        public DispatcherTimer _updateTimer; // Timer to control the rendering speed
         SKElement skiaView;
         SpriteStackData spriteStackData = new SpriteStackData(); // Database context to access the sprite stack data
 
-        SpriteStack selectedStack = new SpriteStack(); // Variable to hold the selected sprite stack from the list box
+        public SpriteStack selectedStack = new SpriteStack(); // Variable to hold the selected sprite stack from the list box
 
         public int _spriteOffsetX = 7; // Default value for sprite offset - this is the offset for the sprite stack in the X direction
+
+        
 
         public MainWindow()
         {
@@ -93,7 +95,7 @@ namespace Sprite_Stacking_Visualiser
 
 
         }
-        private void Update(object sender, EventArgs e)
+        public void Update(object sender, EventArgs e)
         {
 
             renderer._rotationAngle = (renderer._rotationAngle + (float)renderer.RotationSpeed * (float)_updateTimer.Interval.TotalSeconds) % 360f;
@@ -134,7 +136,7 @@ namespace Sprite_Stacking_Visualiser
 
         }
 
-        private void Lbx_SpriteStacks_Initialized(object sender, EventArgs e)
+        public void Lbx_SpriteStacks_Initialized(object sender, EventArgs e)
         {
             Lbx_SpriteStacks.Items.Clear(); // Clear the list box before adding items
 
@@ -151,7 +153,7 @@ namespace Sprite_Stacking_Visualiser
 
         }
 
-        private void Lbx_SpriteStacks_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        public void Lbx_SpriteStacks_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (Lbx_SpriteStacks.SelectedItem != null)
             {
@@ -163,7 +165,7 @@ namespace Sprite_Stacking_Visualiser
             }
         }
 
-        private void Lsv_Sprites_Initialized(object sender, EventArgs e)
+        public void Lsv_Sprites_Initialized(object sender, EventArgs e)
         {
 
             List<Image> SpriteList = new List<Image>();
@@ -195,14 +197,14 @@ namespace Sprite_Stacking_Visualiser
 
         }
 
-        private void Btn_Addstack_Click(object sender, RoutedEventArgs e)
+        public void Btn_Addstack_Click(object sender, RoutedEventArgs e)
         {
             // Open the AddSpriteStackWindow as a dialog
             AddSpriteStackWindow addSpriteStackWindow = new AddSpriteStackWindow();
             addSpriteStackWindow.ShowDialog();
         }
 
-        private void Btn_RemoveStack_Click(object sender, RoutedEventArgs e)
+        public void Btn_RemoveStack_Click(object sender, RoutedEventArgs e)
         {
             // Remove the selected sprite stack from the database
 

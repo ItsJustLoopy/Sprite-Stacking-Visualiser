@@ -140,10 +140,5 @@ namespace Sprite_Stacking_Visualiser
             }
         }
 
-        public void SetEffect(effect newEffect)
-        {
-            Currenteffect = newEffect; // Set the current effect to the new effect
-        }
-
     }
 }
