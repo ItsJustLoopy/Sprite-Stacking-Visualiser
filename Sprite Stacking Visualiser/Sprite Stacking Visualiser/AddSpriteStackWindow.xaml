@@ -1,0 +1,23 @@
+﻿<Window x:Class="Sprite_Stacking_Visualiser.AddSpriteStackWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Sprite Stack" Height="400" Width="600" Background="Black">
+    <Grid Margin="10">
+        <TextBlock Text="Sprite Stack Name:" Margin="126,10,346,335" Foreground="White" Width="108" TextAlignment="Center" Height="19"/>
+        <TextBox x:Name="Txt_SpriteStackName" Margin="251,10,148,333" Height="21" Foreground="White" Background="Black" BorderBrush="White"/>
+
+        <TextBlock Text="Sprite Offset:" Margin="126,38,346,307" Foreground="White" Width="108" TextAlignment="Center" Height="19"/>
+        <TextBox x:Name="Txt_SpriteOffset" Margin="251,36,238,307" Height="21" Foreground="White" Background="Black" BorderBrush="White"/>
+
+        <StackPanel Margin="82,71,104,71">
+
+            <TextBlock Text="Upload Frames:" Margin="0,10,0,5"/>
+            <Button x:Name="Btn_UploadFrames" Content="Upload Frames" Width="150" Click="Btn_UploadFrames_Click" Foreground="White" Background="Black" BorderBrush="White"/>
+            <ListBox x:Name="Lbx_Frames" Height="150" Margin="0,10,0,10" Width="302" Foreground="White" Background="Black" BorderBrush="White" />
+
+        </StackPanel>
+        
+        <Button x:Name="Btn_Save" Content="Save" Click="Btn_Save_Click" Margin="163,303,186,33" Foreground="White" Background="Black"/>
+        <Border BorderBrush="White" BorderThickness="1"/>
+    </Grid>
+</Window>

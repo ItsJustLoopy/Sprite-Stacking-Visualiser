@@ -108,7 +108,9 @@ namespace Sprite_Stacking_Visualiser
             renderer.LoadSpriteStack(renderer.StackToBeRendered); // Load the selected sprite stack into the renderer
 
             Lsv_Sprites.Items.Clear(); 
-            Lsv_Sprites_Initialized(sender, e); 
+            Lsv_Sprites_Initialized(sender, e);
+
+            
 
         }
 
@@ -177,6 +179,13 @@ namespace Sprite_Stacking_Visualiser
             }
 
 
+        }
+
+        private void Btn_Addstack_Click(object sender, RoutedEventArgs e)
+        {
+            // Open the AddSpriteStackWindow as a dialog
+            AddSpriteStackWindow addSpriteStackWindow = new AddSpriteStackWindow();
+            addSpriteStackWindow.ShowDialog();
         }
     }
 }

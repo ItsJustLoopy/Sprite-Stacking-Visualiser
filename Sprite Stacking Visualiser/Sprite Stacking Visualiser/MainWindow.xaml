@@ -25,6 +25,7 @@
                     </GridView>
                 </ListView.View>
             </ListView>
+            <Button x:Name="Btn_Addstack" Content="Add Sprite Stack" Margin="100,312,755,0" VerticalAlignment="Top" Height="32" Foreground="White" Background="Black" BorderBrush="White" Click="Btn_Addstack_Click"/>
         </Grid>
     </Border>
 </Window>

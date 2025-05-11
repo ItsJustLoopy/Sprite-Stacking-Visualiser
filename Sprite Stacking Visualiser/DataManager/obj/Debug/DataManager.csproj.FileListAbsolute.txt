@@ -112,3 +112,11 @@ C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Spri
 C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\DataManager\bin\Debug\Assets\Chair\Chair7.png
 C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\DataManager\bin\Debug\Assets\Chair\Chair8.png
 C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\DataManager\bin\Debug\Assets\Chair\Chair9.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\DataManager\bin\Debug\Assets\Table\Table0.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\DataManager\bin\Debug\Assets\Table\Table1.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\DataManager\bin\Debug\Assets\Table\Table2.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\DataManager\bin\Debug\Assets\Table\Table3.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\DataManager\bin\Debug\Assets\Table\Table4.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\DataManager\bin\Debug\Assets\Table\Table5.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\DataManager\bin\Debug\Assets\Table\Table6.png
+C:\Users\itsju\Documents\GitHub\OOD-Project-2025-Sprite-Stacking-Visualiser\Sprite Stacking Visualiser\DataManager\bin\Debug\Assets\Table\Table7.png

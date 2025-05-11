@@ -19,6 +19,7 @@ namespace DataManager
                 CreateSpriteStack(db, "Crate", 8, 1, 7);
                 CreateSpriteStack(db, "Chest", 18, 2, 7);
                 CreateSpriteStack(db, "Chair", 12, 3, 10);
+                CreateSpriteStack(db, "Table", 8, 4, 10);
             }
 
         }
